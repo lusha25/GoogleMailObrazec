@@ -1,0 +1,90 @@
+
+@font-face {
+    font-family: "google-sans";
+    src: url("https://fonts.gstatic.com/s/googlesans/v58/4UaRrENHsxJlGDuGo1OIlJfC6l_24rlCK1Yo_Iq2vgCI.woff2")
+      format("woff2");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: google-sans;
+}
+html, body {
+    height: 100%;
+}
+.main{
+    background-color: #f0f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+.footer {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    margin: 16px 0;
+}
+.footer .group-hpt{
+    list-style: none;
+    display: flex;
+}
+.footer .group-hpt a {
+    display: block;
+    text-decoration: none;
+    color: #1f1f1f;
+    padding: 8px 12px;
+    font-size: 12px !important;
+    border-radius: 8px;
+    margin-left: 10px;
+}
+.footer .group-hpt a:hover{
+    background-color: #e2e6eb;
+}
+
+.main .wrapper {
+    height: 40%;
+    width: 50%;
+    border-radius: 20px;
+    background-color: white ;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 36px;
+}
+.left, .right{
+    flex-basis: 50%;
+    height: 80%;
+}
+.bottom {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+}
+.bottom button.create-account-btn, .bottom button.next-btn {
+    all: unset;
+    height: 40px;
+    font-size: 14px !important;
+    border-radius: 20px;
+    text-align: center;
+}
+.bottom button.create-account-btn{
+    color: #0b56d0;
+    padding: 0 16px;
+}
+.bottom button.create-account-btn:hover{
+    background-color: #f5f8fd;
+}
+.bottom button.next-btn {
+    background-color: #0b56d0;
+    padding: 0 24px;
+    color: white;
+}
+.bottom button.next-btn:hover{
+    background-color: #0b56d0;
+}
