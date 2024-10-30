@@ -44,31 +44,49 @@ html, body {
 .footer .group-hpt a:hover{
     background-color: #e2e6eb;
 }
+.footer .lang select {
+    all: unset;
+    font-size: 12px;
+}
+.footer .lang select:focus {
+    border: 1px solid ;
+}
 
 .main .wrapper {
-    height: 40%;
+    position: relative;
     width: 50%;
     border-radius: 20px;
     background-color: white ;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 36px;
+    padding: 108px 36px 36px 36px;
+    box-sizing: content-box;
 }
 .left, .right{
+    position: relative;
     flex-basis: 50%;
-    height: 80%;
+}
+.right{
+    padding-left: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.left{
+    padding-right: 24px;
 }
 .bottom {
     width: 100%;
-    height: 20%;
     display: flex;
     flex-direction: row-reverse;
     flex-wrap: wrap;
+    margin-top: 32px;
 }
 .bottom button.create-account-btn, .bottom button.next-btn {
     all: unset;
     height: 40px;
+    font-weight: 500;
     font-size: 14px !important;
     border-radius: 20px;
     text-align: center;
@@ -87,4 +105,67 @@ html, body {
 }
 .bottom button.next-btn:hover{
     background-color: #0b56d0;
+}
+.invalid-input{
+    display: flex;
+    align-items: flex-start;
+    margin-top: 3px;
+    height: 16px !important;
+}
+.invalid-input svg{
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    fill: red;
+}
+.invalid-input span{
+    font-size: 12px;
+    color: red;
+    letter-spacing: 0.1px;
+    line-height: 16px;
+}
+.left svg{
+    position: absolute;
+    top: -74px;
+}
+.sign-in-header-div {
+    margin-bottom: 16px;
+}
+.sign-in-header {
+    font-size: 36px;
+}
+
+.email-wrapper{
+    position: relative;
+    width: 100%;
+}
+
+.email-wrapper input {
+    width: 100%;
+    display: block;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 12px 14px;
+    height: 56px;
+    font-size: 16px;
+    outline: none;
+}  
+
+.right .forgot-email-btn {
+    all: unset;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 2px 8px;
+    letter-spacing: 0.25px;
+    line-height: normal;
+    color: #0b57d0;
+    border-radius: 8px;
+}
+.right .forgot-email-btn:hover {
+    background-color: #ebf2fc;
+}
+
+.right .guest-mode {
+    font-size: 14px;
+    margin-top: 32px;
 }
