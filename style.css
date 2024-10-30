@@ -11,11 +11,11 @@
     box-sizing: border-box;
     font-family: google-sans;
 }
-html, body {
+html, body, main {
     height: 100%;
+    background-color: #f0f4f9;
 }
 .main{
-    background-color: #f0f4f9;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,8 +24,8 @@ html, body {
 }
 .footer {
     display: flex;
-    width: 50%;
     justify-content: space-between;
+    width: 1040px;
     margin: 16px 0;
 }
 .footer .group-hpt{
@@ -45,23 +45,30 @@ html, body {
     background-color: #e2e6eb;
 }
 .footer .lang select {
-    all: unset;
     font-size: 12px;
+    padding:  8px 20px 8px 12px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-radius: 8px;
 }
 .footer .lang select:focus {
-    border: 1px solid ;
+    border: 1px solid #0b57d0;
+}
+.footer .lang select:hover {
+    background-color: #e1e5ea;
 }
 
 .main .wrapper {
     position: relative;
-    width: 50%;
+    width: 1040px;
+    min-height: 384px;
     border-radius: 20px;
     background-color: white ;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     padding: 108px 36px 36px 36px;
-    box-sizing: content-box;
 }
 .left, .right{
     position: relative;
@@ -90,6 +97,7 @@ html, body {
     font-size: 14px !important;
     border-radius: 20px;
     text-align: center;
+    cursor: pointer;
 }
 .bottom button.create-account-btn{
     color: #0b56d0;
@@ -104,7 +112,7 @@ html, body {
     color: white;
 }
 .bottom button.next-btn:hover{
-    background-color: #0b56d0;
+    background-color: #0e4eb4;
 }
 .invalid-input{
     display: flex;
@@ -132,7 +140,7 @@ html, body {
     margin-bottom: 16px;
 }
 .sign-in-header {
-    font-size: 36px;
+    font-size: 44px;
 }
 
 .email-wrapper{
@@ -150,6 +158,9 @@ html, body {
     font-size: 16px;
     outline: none;
 }  
+.email-wrapper input:focus{
+    border: 2px solid #0b56d0;
+}
 
 .right .forgot-email-btn {
     all: unset;
@@ -160,6 +171,7 @@ html, body {
     line-height: normal;
     color: #0b57d0;
     border-radius: 8px;
+    cursor: pointer;
 }
 .right .forgot-email-btn:hover {
     background-color: #ebf2fc;
@@ -168,4 +180,59 @@ html, body {
 .right .guest-mode {
     font-size: 14px;
     margin-top: 32px;
+    letter-spacing: 0.015625rem;
+
+}
+.right .guest-mode a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #0b56d0;
+}
+.right .guest-mode a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 1240px) {
+    .wrapper, .footer{
+        width: 90% !important;
+    }
+}
+
+@media (max-width: 840px){
+    .right, .left {
+        flex-basis:initial;
+    }
+    .right {
+        padding-left: 0;
+    }
+    .left {
+        margin-bottom: 32px;
+    }
+    .wrapper{
+        width: 480px !important;
+        flex-direction: column !important;
+        padding: 96px 24px 24px;
+    }
+    .footer {
+        width: 480px !important;
+    }
+    .bottom{
+        justify-content: space-between !important;
+    }
+}
+@media (max-width: 480px) {
+    .wrapper {
+        border-radius: 0px;
+        width: 100% !important;
+        height: 100%;
+    }
+    .footer {
+        position: absolute;
+        bottom: 0;
+        width: 90% !important;
+        flex-wrap: wrap;
+    }
+    .group-hpt{
+        flex-wrap: wrap;
+    }
 }
