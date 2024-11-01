@@ -23,29 +23,50 @@
             </div>
             <div class="right">
                 <div class="email-wrapper">
-                    <input type="text" placeholder="Email or phone">
-                    <div class="invalid-input">
-                        <svg aria-hidden="true" class="Qk3oof xTjuxe" fill="currentColor" focusable="false" width="16px" height="16px" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg>
-                        <span>Enter an email or phone number</div></span>
+                    <div class="email-field-wrapper">
+                        <input type="text" placeholder="Email or phone">
+                        <div class="invalid-input">
+                            <svg aria-hidden="true" class="Qk3oof xTjuxe" fill="currentColor" focusable="false" width="16px" height="16px" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg>
+                            <span style="display: inline-block; overflow: hidden; text-overflow: ellipsis;" >Enter an email or phone number</span>
+                        </div>
                         <div style="padding: 9px 0 3px 0;">
                             <button class="forgot-email-btn">Forgot email?</button>
                         </div>
+                    </div>
+                    <div class="guest-mode">
+                        Not your computer? Use Guest mode to sign in privately.
+                        <a href="#">
+                            Learn more about using Guest mode
+                        </a>
+                    </div>
                 </div>
-                <div class="guest-mode">
-                    Not your computer? Use Guest mode to sign in privately.
-                    <a href="#" target="_blank">
-                        Learn more about using Guest mode
-                    </a>
+                <div class="password-wrapper">
+                    <div class="password-field-wrapper">
+                        <span style="display:block; margin-bottom: 40px; font-size: 14px;">
+                            To continue, first verify it's you
+                        </span>
+                        <input id="password-field" type="text" placeholder="Enter your password">
+                        <div class="invalid-input">
+                            <svg aria-hidden="true" class="Qk3oof xTjuxe" fill="currentColor" focusable="false" width="16px" height="16px" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg>
+                            <span style="display: inline-block; overflow: hidden; text-overflow: ellipsis;">Wrong password. Try again or click Forgot password to reset it.</span>
+                            <!-- <span>Enter a password</span> -->
+                        </div>
+                        <div style="padding: 8px 0 3px 0; display: flex;">
+                            <input id="show-password-chckbox" type="checkbox" name="" id="">
+                            <span style="font-size: 14px;">Show password</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="bottom">
+                <button class="create-account-btn">
+                    Create account?
+                    <!-- Forgot password? -->
+                </button>  
                 <button class="next-btn">
                     Next
                 </button>
-                <button class="create-account-btn">
-                    Create Account
-                </button>  
             </div>
         </div>
         <div class="footer">
