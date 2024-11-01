@@ -76,10 +76,14 @@ html, body, main {
     flex-basis: 50%;
 }
 .right{
-    padding-left: 24px;
+    
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    position: relative;
+    padding-left: 24px;
+    overflow: hidden;
 }
 .left{
     padding-right: 24px;
@@ -112,6 +116,7 @@ html, body, main {
     background-color: #0b56d0;
     padding: 0 24px;
     color: white;
+    margin-left: 30px;
 }
 .bottom button.next-btn:hover{
     background-color: #0e4eb4;
@@ -209,9 +214,23 @@ html, body, main {
     position: relative;
 }
 
+
+.email-wrapper.active, .password-wrapper.active {
+    position: relative;
+    display: block;
+    transition: transform .25s ease;
+    transform: translateX(0);
+}
+
 .password-wrapper {
     position: absolute;
     transform: translateX(550px);
+    transition: transform .25s ease;
+}
+.email-wrapper {
+    position: absolute;
+    transition: transform .25s ease;
+    transform: translateX(-550px);
 }
 
 
@@ -245,6 +264,25 @@ html, body, main {
     }
 }
 @media (max-width: 480px) {
+    .wrapper {
+        border-radius: 0;
+        width: 100% !important;
+        height: 100% !important;
+    }
+    .main {
+        background-color: white;
+    }
+    .footer {
+        position: absolute;
+        bottom: 0;
+        width: 90% !important;
+        flex-wrap: wrap;
+    }
+    .group-hpt{
+        flex-wrap: wrap;
+    }
+}
+@media (max-height: 584px){
     .wrapper {
         border-radius: 0;
         width: 100% !important;

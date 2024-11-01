@@ -22,12 +22,20 @@
 
             </div>
             <div class="right">
-                <div class="email-wrapper">
+                <div class="email-wrapper active">
                     <div class="email-field-wrapper">
                         <input type="text" placeholder="Email or phone">
                         <div class="invalid-input">
                             <svg aria-hidden="true" class="Qk3oof xTjuxe" fill="currentColor" focusable="false" width="16px" height="16px" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg>
-                            <span style="display: inline-block; overflow: hidden; text-overflow: ellipsis;" >Enter an email or phone number</span>
+
+                            <span id="invalid-email" style="display: none; overflow: hidden; text-overflow: ellipsis;">
+                                Enter a valid email or phone number
+                            </span> <!-- should be display: inline-block; when toggled (back) on -->\
+
+                            <span id="no-email" style="display: none; overflow: hidden; text-overflow: ellipsis;">
+                                Enter an email or phone number
+                            </span>
+
                         </div>
                         <div style="padding: 9px 0 3px 0;">
                             <button class="forgot-email-btn">Forgot email?</button>
@@ -46,10 +54,20 @@
                             To continue, first verify it's you
                         </span>
                         <input id="password-field" type="text" placeholder="Enter your password">
-                        <div class="invalid-input">
-                            <svg aria-hidden="true" class="Qk3oof xTjuxe" fill="currentColor" focusable="false" width="16px" height="16px" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg>
-                            <span style="display: inline-block; overflow: hidden; text-overflow: ellipsis;">Wrong password. Try again or click Forgot password to reset it.</span>
-                            <!-- <span>Enter a password</span> -->
+                        <div class="invalid-input password" class="display: none;">
+                            <svg aria-hidden="true" class="Qk3oof xTjuxe" fill="currentColor" focusable="false" width="16px" height="16px" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z">
+                                </path>
+                            </svg>
+
+                            <span id="wrong-password" style="display: none; overflow: hidden; text-overflow: ellipsis;">
+                                Wrong password. Try again or click Forgot password to reset it.
+                            </span>
+
+                            <span id="no-password" style="display: none; overflow: hidden; text-overflow: ellipsis;">
+                                Enter a password
+                            </span>
+                            
                         </div>
                         <div style="padding: 8px 0 3px 0; display: flex;">
                             <input id="show-password-chckbox" type="checkbox" name="" id="">
@@ -84,5 +102,15 @@
             </ul>
         </div>
     </div>
+
+    <script>
+        const emailWrapper = document.querySelector(".email-wrapper");
+        const passwordWrapper = document.querySelector(".password-wrapper");
+
+        document.querySelector(".next-btn").addEventListener("click", (e) => {
+            emailWrapper.classList.remove("active");
+            passwordWrapper.classList.add("active");
+        });
+    </script>
 </body>
 </html>
