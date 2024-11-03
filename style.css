@@ -122,12 +122,12 @@ html, body, main {
     background-color: #0e4eb4;
 }
 .invalid-input{
-    display: flex;
+    display: none;
     align-items: flex-start;
     margin-top: 3px;
     height: 16px !important;
-    overflow: hidden; 
-    flex-shrink: 1; 
+    overflow: hidden;
+    flex-shrink: 1;
     min-width: 0;
 }
 .invalid-input svg{
@@ -141,7 +141,18 @@ html, body, main {
     color: red;
     letter-spacing: 0.1px;
     line-height: 16px;
+
+    display: none; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
 }
+.invalid-input span.on{
+    display: inline-block;
+}
+.invalid-input.on{
+    display: flex;
+}
+
 .left svg{
     position: absolute;
     top: -74px;
@@ -170,6 +181,15 @@ html, body, main {
 }  
 .email-field-wrapper input:focus{
     border: 2px solid #0b56d0;
+}
+.password-field-wrapper #password-field:focus{
+    border: 2px solid #0b56d0;
+}
+#password-field.invalid{
+    border: 2px solid red;
+}
+#email-field.invalid{
+    border: 2px solid red;
 }
 
 .right .forgot-email-btn {
@@ -233,10 +253,60 @@ html, body, main {
     transform: translateX(-550px);
 }
 
+.back-arrow {
+    color: darkgray;
+    position: absolute; 
+    transform: scale(1.5);
+    z-index: 3;
+    padding: 12px 0 0 12px;
+    cursor: pointer;
+}
+.back-arrow.inactive {
+    display: none;
+}
+
+.email-div {
+    border-radius: 15px;
+    width: fit-content;
+    padding: 5px;
+    border: 1px solid black;
+    display: none;
+    justify-content: center;
+    align-items: center;      
+    cursor: pointer;
+}
+.email-div.on {
+    display: flex;
+}
+.email-div:hover{
+    background-color: #ebf2fc;
+}
+
+.email-div ion-icon[name="caret-down-outline"]{
+    transform: scale(0.65);
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.email-div ion-icon[name="person-circle-outline"]{
+    transform: scale(1.2);
+    margin-right: 8px;
+}
+
+.email-address {
+    font-weight: 500; 
+    font-size: 0.875rem; 
+    letter-spacing: 0rem;
+}
+
+.show-password-div {
+    display: flex;
+    padding: 8px 0 3px 0; 
+    user-select: none;
+}
 
 @media (max-width: 1240px) {
     .wrapper, .footer{
-        width: 90% !important;
+        width: 80% !important;
     }
 }
 
