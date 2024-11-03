@@ -148,7 +148,7 @@
         const phoneRegex  = /(?:\+?\d{1,3}[-.\s]?)?(?:\(?\d{1,4}\)?[-.\s]?)?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}/;
         const emailField = document.querySelector("#email-field");
 
-        const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+        const passwordRegex = /^.{8,}$/;
         const passwordField = document.querySelector("#password-field");
 
         function validEmailOrPhone(input) {
