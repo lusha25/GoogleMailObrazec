@@ -353,11 +353,6 @@ html, body, main {
     }
 }
 @media (max-height: 584px){
-    .wrapper {
-        border-radius: 0;
-        width: 100% !important;
-        height: 100% !important;
-    }
     .main {
         background-color: white;
     }
